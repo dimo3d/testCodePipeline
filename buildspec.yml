@@ -14,7 +14,7 @@ phases:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - chalice deploy
+      - (cd testPip && chalice deploy)
   post_build:
     commands:
       - echo Build completed on `date`
