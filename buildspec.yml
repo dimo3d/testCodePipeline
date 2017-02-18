@@ -1,0 +1,24 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
+    AWS_DEFAULT_REGION: "eu-west-1"
+phases:
+  install:
+    commands:
+      - cd testPip
+      - pip install -r requirements.txt
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - chalice deploy
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - testPip/.chalice/deployments/*
+  discard-paths: yes
