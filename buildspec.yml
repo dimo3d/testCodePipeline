@@ -8,7 +8,7 @@ phases:
   install:
     commands:
       - cd testPip
-      - pip install -r requirements.txt
+      - pip install -r testPip/requirements.txt
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
