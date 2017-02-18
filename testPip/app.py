@@ -5,7 +5,7 @@ app = Chalice(app_name='testPip')
 
 @app.route('/')
 def index():
-    return {'hullo': 'world'}
+    return {'hillo': 'world'}
 
 
 # The view function above will return {"hello": "world"}
