@@ -9,7 +9,7 @@ def index():
 
 @app.route('/users')
 def getUsers():
-	return {'users'}
+	return {'users': ["bla","blub"]}
 
 # The view function above will return {"hello": "world"}
 # whenever you make an HTTP GET request to '/'.
