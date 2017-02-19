@@ -7,6 +7,9 @@ app = Chalice(app_name='testPip')
 def index():
     return {'hillo': 'world'}
 
+@app.route('/users')
+def getUsers():
+	return {'users'}
 
 # The view function above will return {"hello": "world"}
 # whenever you make an HTTP GET request to '/'.
